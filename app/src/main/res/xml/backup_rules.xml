@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android 11 and older: Auto Backup carries the database (the save) and DataStore (settings).
+     The share-sheet export lives in cache and is never backed up. -->
+<full-backup-content>
+    <include domain="database" path="." />
+    <include domain="file" path="datastore/" />
+</full-backup-content>

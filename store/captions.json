@@ -1,0 +1,15 @@
+{
+  "background": ["#2CC4A8", "#1AA29A"],
+  "text": "#1C2233",
+  "frame": "#1C2233",
+  "font": "fonts/alegreya_bold.ttf",
+  "weight": 700,
+  "shots": [
+    { "src": "screenshots-raw/01-ledger-growing-initial.png", "out": "screenshots/01-ledger-growing-initial.png", "caption": "A story that ends" },
+    { "src": "screenshots-raw/02-chronicle-choices.png", "out": "screenshots/02-chronicle-choices.png", "caption": "Eleven choices, no undo" },
+    { "src": "screenshots-raw/03-workshop-hands.png", "out": "screenshots/03-workshop-hands.png", "caption": "No ads. Nothing to buy." },
+    { "src": "screenshots-raw/04-ledger-away-entry.png", "out": "screenshots/04-ledger-away-entry.png", "caption": "The ledger kept writing" },
+    { "src": "screenshots-raw/05-chronicle-dark-endings.png", "out": "screenshots/05-chronicle-dark-endings.png", "caption": "Three endings to find" },
+    { "src": "screenshots-raw/06-ledger-true-black.png", "out": "screenshots/06-ledger-true-black.png", "caption": "Light, dark, true black" }
+  ]
+}

@@ -1,0 +1,2925 @@
+{
+ "engineVersion": 1,
+ "start": {
+  "vellum": 3
+ },
+ "resources": [
+  {
+   "id": "vellum",
+   "one": "skin of vellum",
+   "many": "skins of vellum",
+   "gained": "scraped",
+   "chapter": 1
+  },
+  {
+   "id": "folios",
+   "one": "folio",
+   "many": "folios",
+   "gained": "copied",
+   "chapter": 1
+  },
+  {
+   "id": "pennies",
+   "one": "penny",
+   "many": "pennies",
+   "gained": "earned",
+   "chapter": 1
+  },
+  {
+   "id": "ink",
+   "one": "horn of ink",
+   "many": "horns of ink",
+   "gained": "ground",
+   "chapter": 2
+  },
+  {
+   "id": "books",
+   "one": "book",
+   "many": "books",
+   "gained": "bound",
+   "chapter": 3
+  },
+  {
+   "id": "renown",
+   "one": "renown",
+   "many": "renown",
+   "gained": "earned",
+   "chapter": 4
+  },
+  {
+   "id": "paper",
+   "one": "ream of paper",
+   "many": "reams of paper",
+   "gained": "made",
+   "chapter": 5
+  },
+  {
+   "id": "type",
+   "one": "sort of type",
+   "many": "sorts of type",
+   "gained": "cast",
+   "chapter": 5
+  }
+ ],
+ "actions": [
+  {
+   "id": "copy",
+   "label": "Copy a line",
+   "chapter": 1,
+   "cooldown": 1.0,
+   "gains": {
+    "folios": 0.2
+   },
+   "doneLine": "Copied a line"
+  },
+  {
+   "id": "sell",
+   "label": "Sell the page",
+   "chapter": 1,
+   "cooldown": 1.0,
+   "costs": {
+    "folios": 1
+   },
+   "gains": {
+    "pennies": 3
+   },
+   "revealAt": {
+    "taps": 5
+   },
+   "revealLine": "A carter at the abbey gate will pay three pennies for a finished page.",
+   "doneLine": "Sold the page"
+  },
+  {
+   "id": "vellum",
+   "label": "Buy vellum",
+   "chapter": 1,
+   "cooldown": 1.0,
+   "costs": {
+    "pennies": 4
+   },
+   "gains": {
+    "vellum": 5
+   },
+   "revealAt": {
+    "pennies": 40
+   },
+   "revealLine": "The tanner’s yard sells scraped skins, five for four pennies. A good scrivener will want them.",
+   "doneLine": "Bought vellum"
+  },
+  {
+   "id": "grind",
+   "label": "Grind oak galls",
+   "chapter": 2,
+   "cooldown": 2.0,
+   "costs": {
+    "pennies": 2
+   },
+   "gains": {
+    "ink": 1
+   },
+   "revealLine": "Oak galls, green vitriol and gum. The mortar is heavy and the ink is black as a rook.",
+   "doneLine": "Ground oak galls"
+  },
+  {
+   "id": "sew",
+   "label": "Sew a gathering",
+   "chapter": 3,
+   "cooldown": 2.0,
+   "costs": {
+    "folios": 4,
+    "ink": 1
+   },
+   "gains": {
+    "books": 0.25
+   },
+   "revealLine": "Four folios folded, pricked and sewn make a gathering. Four gatherings make a book.",
+   "doneLine": "Sewed a gathering"
+  },
+  {
+   "id": "read",
+   "label": "Read aloud at the door",
+   "chapter": 4,
+   "cooldown": 3.0,
+   "costs": {},
+   "gains": {
+    "renown": 1
+   },
+   "revealLine": "Nobody in the lane can read, but everyone stops to listen.",
+   "doneLine": "Read aloud at the door"
+  },
+  {
+   "id": "pull",
+   "label": "Pull the press",
+   "chapter": 5,
+   "cooldown": 2.0,
+   "costs": {
+    "paper": 1,
+    "ink": 1
+   },
+   "gains": {
+    "folios": 8
+   },
+   "revealLine": "Pieter shows you the bar. Ink the forme, lay the sheet, pull. Eight pages at a stroke.",
+   "doneLine": "Pulled the press"
+  },
+  {
+   "id": "cry",
+   "label": "Cry the new books",
+   "chapter": 6,
+   "cooldown": 3.0,
+   "costs": {
+    "books": 2
+   },
+   "gains": {
+    "pennies": 400,
+    "renown": 4
+   },
+   "revealLine": "The market cross is the best shop in any town.",
+   "doneLine": "Cried the new books"
+  }
+ ],
+ "workers": [
+  {
+   "id": "tanner",
+   "one": "tanner’s girl",
+   "many": "tanner’s girls",
+   "chapter": 1,
+   "cost": {
+    "pennies": 40
+   },
+   "growth": 1.2,
+   "produces": {
+    "vellum": 0.1
+   },
+   "revealAt": {
+    "pennies": 60
+   },
+   "revealLine": "Agnes, the tanner’s girl, offers to bring skins every morning for a wage.",
+   "about": "Brings scraped skins from the tannery every morning.",
+   "firstHireLine": "Agnes arrives before dawn with a bundle of skins on her back, and leaves before you can thank her."
+  },
+  {
+   "id": "novice",
+   "one": "novice",
+   "many": "novices",
+   "chapter": 1,
+   "cost": {
+    "pennies": 12
+   },
+   "growth": 1.2,
+   "produces": {
+    "folios": 0.05
+   },
+   "revealAt": {
+    "pennies": 15
+   },
+   "revealLine": "A novice from the abbey school asks for work. The workshop is open.",
+   "about": "Copies slowly and blots often, on scraps nobody else wants.",
+   "firstHireLine": "The novice is called Edwin. He is thirteen, and he writes his letters with his tongue between his teeth."
+  },
+  {
+   "id": "scrivener",
+   "one": "scrivener",
+   "many": "scriveners",
+   "chapter": 1,
+   "cost": {
+    "pennies": 90,
+    "vellum": 20
+   },
+   "growth": 1.2,
+   "produces": {
+    "folios": 0.3
+   },
+   "revealAt": {
+    "pennies": 120
+   },
+   "revealLine": "A scrivener who lost his post at the manor court asks to sit at your second desk.",
+   "about": "A trained hand. Fast, and careful with the rubrics. Hired with a stock of good vellum.",
+   "firstHireLine": "The scrivener is called Walter Wat. He has a fine secretary hand and a bad cough, and he is never late."
+  },
+  {
+   "id": "gatherer",
+   "one": "gall gatherer",
+   "many": "gall gatherers",
+   "chapter": 2,
+   "cost": {
+    "pennies": 80
+   },
+   "growth": 1.2,
+   "produces": {
+    "ink": 0.5
+   },
+   "revealLine": "Children from the lane will pick oak galls for a penny a basket.",
+   "about": "Picks galls and grinds them into ink.",
+   "firstHireLine": "The first gatherer is a girl called Meg, who knows every oak within five miles and which ones are haunted."
+  },
+  {
+   "id": "miller",
+   "one": "ink miller",
+   "many": "ink millers",
+   "chapter": 2,
+   "cost": {
+    "pennies": 600
+   },
+   "growth": 1.2,
+   "produces": {
+    "ink": 2.0,
+    "pennies": 1.5
+   },
+   "consumes": {},
+   "revealAt": {
+    "ink": 60
+   },
+   "revealLine": "Aldous says his millstones would grind galls as well as barley, and sell the surplus to the cathedral.",
+   "about": "Grinds ink at the river mill and sells what you do not use.",
+   "firstHireLine": "Aldous grinds the first sack of galls himself, and tastes the ink off his finger, and says it will do."
+  },
+  {
+   "id": "papermaker",
+   "one": "papermaker",
+   "many": "papermakers",
+   "chapter": 5,
+   "cost": {
+    "pennies": 40000
+   },
+   "growth": 1.2,
+   "produces": {
+    "paper": 1.0
+   },
+   "revealLine": "Rags beaten to pulp, laid on a wire mould, pressed and hung. Paper, cheaper than any skin.",
+   "about": "Beats rags into paper at the old fulling mill.",
+   "firstHireLine": "The papermaker is a Genoese who has come a long way for reasons he does not discuss. His paper is very good."
+  },
+  {
+   "id": "founder",
+   "one": "typefounder",
+   "many": "typefounders",
+   "chapter": 5,
+   "cost": {
+    "pennies": 70000
+   },
+   "growth": 1.2,
+   "produces": {
+    "type": 1.0
+   },
+   "revealAt": {
+    "paper": 20
+   },
+   "revealLine": "Pieter carves a punch for the letter a, and then for every other letter.",
+   "about": "Casts lead type from Pieter’s punches.",
+   "firstHireLine": "The typefounder burns his hand on the first day and his eyebrows on the second, and by the third he is casting letters."
+  },
+  {
+   "id": "pressman",
+   "one": "pressman",
+   "many": "pressmen",
+   "chapter": 5,
+   "cost": {
+    "pennies": 150000,
+    "renown": 600
+   },
+   "growth": 1.2,
+   "produces": {
+    "folios": 40.0
+   },
+   "consumes": {
+    "paper": 1.2,
+    "ink": 1.5,
+    "type": 0.15
+   },
+   "revealAt": {
+    "type": 10
+   },
+   "revealLine": "Two men to a press: one inks, one pulls. They work in shirtsleeves even in winter.",
+   "about": "Works the press. Uses paper, ink and wears out type.",
+   "firstHireLine": "The first pressmen are the scribes’ sons. They work in shirtsleeves, and they sing, which their fathers never did."
+  },
+  {
+   "id": "binder",
+   "one": "binder",
+   "many": "binders",
+   "chapter": 3,
+   "cost": {
+    "pennies": 900
+   },
+   "growth": 1.2,
+   "produces": {
+    "books": 0.1
+   },
+   "consumes": {
+    "folios": 1.6,
+    "ink": 0.4,
+    "vellum": 0.1
+   },
+   "revealLine": "A binder from York sets up his sewing frame by your window.",
+   "about": "Sews gatherings and covers them in vellum. Uses folios, ink and skins.",
+   "firstHireLine": "Thomas Fell unpacks a roll of needles, a bone folder and a knife his grandfather used. He does not unpack anything else."
+  },
+  {
+   "id": "librarian",
+   "one": "librarian",
+   "many": "librarians",
+   "chapter": 4,
+   "cost": {
+    "pennies": 6000,
+    "books": 10
+   },
+   "growth": 1.2,
+   "produces": {
+    "renown": 0.6
+   },
+   "consumes": {
+    "books": 0.01
+   },
+   "revealLine": "The lending room needs a keeper who can find a book and remember who took it.",
+   "about": "Keeps the lending room and the borrowers’ roll.",
+   "firstHireLine": "The first librarian is a retired clerk of the court, who treats every borrower as a witness and every late book as a crime."
+  },
+  {
+   "id": "lector",
+   "one": "lector",
+   "many": "lectors",
+   "chapter": 4,
+   "cost": {
+    "pennies": 20000,
+    "books": 25
+   },
+   "growth": 1.2,
+   "produces": {
+    "renown": 3.0
+   },
+   "consumes": {
+    "ink": 1.0
+   },
+   "revealAt": {
+    "renown": 150
+   },
+   "revealLine": "Brother Osric offers to teach letters in the evenings, if you keep him in ink.",
+   "about": "Teaches reading in the lending room at night.",
+   "firstHireLine": "Brother Osric arrives with a slate under his arm, and does not mention the herbal, and neither do you."
+  },
+  {
+   "id": "carter",
+   "one": "carter",
+   "many": "carters",
+   "chapter": 6,
+   "cost": {
+    "pennies": 600000,
+    "renown": 4000
+   },
+   "growth": 1.2,
+   "produces": {
+    "pennies": 700.0,
+    "renown": 12.0
+   },
+   "consumes": {
+    "books": 1.5
+   },
+   "revealLine": "Wagons, oxen and men who know the roads to every town on the Sele.",
+   "about": "Carries books to the towns downriver.",
+   "firstHireLine": "The first carter is Hamo’s nephew, who has his uncle’s smile and none of his wandering."
+  },
+  {
+   "id": "bookseller",
+   "one": "bookseller",
+   "many": "booksellers",
+   "chapter": 3,
+   "cost": {
+    "pennies": 1500
+   },
+   "growth": 1.2,
+   "produces": {
+    "pennies": 20.0
+   },
+   "consumes": {
+    "books": 0.08
+   },
+   "revealAt": {
+    "books": 3
+   },
+   "revealLine": "Margery Stall opens a bookshop under your sign on market days.",
+   "about": "Sells bound books to canons, lawyers and merchants.",
+   "firstHireLine": "Margery Stall has sold eggs, ribbons and pardons in her time. Books, she says, are the easiest of the four."
+  },
+  {
+   "id": "pedlar",
+   "one": "pedlar",
+   "many": "pedlars",
+   "chapter": 1,
+   "cost": {
+    "pennies": 9
+   },
+   "growth": 1.2,
+   "produces": {
+    "pennies": 0.3
+   },
+   "consumes": {
+    "folios": 0.1
+   },
+   "revealAt": {
+    "pennies": 6
+   },
+   "revealLine": "Hamo the pedlar will carry pages to the fairs, if you will trust him with them.",
+   "about": "Sells loose pages at fairs and markets.",
+   "firstHireLine": "Hamo takes the first bundle of pages, bows too low, and is gone for four days. He comes back with every penny."
+  }
+ ],
+ "upgrades": [
+  {
+   "id": "goose_quills",
+   "name": "Goose quills",
+   "period": "Cut from the left wing, which curves away from a right hand.",
+   "chapter": 1,
+   "cost": {
+    "pennies": 15
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "action:copy",
+     "factor": 2
+    }
+   ],
+   "effectText": "Copy two lines at a time.",
+   "revealAt": {
+    "pennies": 8
+   },
+   "boughtLine": "Six goose feathers, cured in hot sand. The first one splits; the second cuts a line as fine as a hair."
+  },
+  {
+   "id": "pumice",
+   "name": "Pumice and chalk",
+   "period": "A skin rubbed smooth takes ink without feathering.",
+   "chapter": 1,
+   "cost": {
+    "pennies": 45
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:novice",
+     "factor": 1.5
+    }
+   ],
+   "effectText": "Novices copy half as much again.",
+   "revealAt": {
+    "pennies": 25
+   },
+   "boughtLine": "The novices rub the skins until their arms ache and the vellum shines like the inside of a shell."
+  },
+  {
+   "id": "stall",
+   "name": "A stall on feast days",
+   "period": "Saints’ days bring the whole valley to the market.",
+   "chapter": 1,
+   "cost": {
+    "pennies": 70
+   },
+   "effects": [
+    {
+     "kind": "yield",
+     "target": "worker:pedlar",
+     "factor": 1.4
+    },
+    {
+     "kind": "yield",
+     "target": "action:sell",
+     "factor": 1.4
+    }
+   ],
+   "effectText": "Pages sell for more.",
+   "revealAt": {
+    "pennies": 45
+   },
+   "boughtLine": "A trestle, a cloth and a board painted with an inkhorn. Hamo stands behind it on feast days and sells everything."
+  },
+  {
+   "id": "palimpsest",
+   "name": "Scraped palimpsests",
+   "period": "Old accounts scraped back to the skin. Nobody will miss the tithe rolls of 1310.",
+   "chapter": 1,
+   "cost": {
+    "pennies": 110
+   },
+   "effects": [
+    {
+     "kind": "cost",
+     "target": "worker:scrivener",
+     "factor": 0.75
+    }
+   ],
+   "effectText": "Scriveners cost a quarter less to hire.",
+   "revealAt": {
+    "pennies": 90
+   },
+   "boughtLine": "The old tithe rolls go under the knife. Somewhere in the scraping, the abbey forgets that it was owed eleven shillings."
+  },
+  {
+   "id": "pricking",
+   "name": "A pricking wheel",
+   "period": "Rules every line of a quire at once.",
+   "chapter": 1,
+   "cost": {
+    "pennies": 220
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:scrivener",
+     "factor": 1.6
+    }
+   ],
+   "effectText": "Scriveners copy more than half as much again.",
+   "revealAt": {
+    "pennies": 140
+   },
+   "boughtLine": "A little brass wheel of spikes. Rolled down the margin, it pricks every line of a quire in one pass."
+  },
+  {
+   "id": "tanner_contract",
+   "name": "A contract with the tannery",
+   "period": "Agnes’s father drives a hard bargain and keeps it.",
+   "chapter": 1,
+   "cost": {
+    "pennies": 180
+   },
+   "effects": [
+    {
+     "kind": "yield",
+     "target": "worker:tanner",
+     "factor": 1.5
+    }
+   ],
+   "effectText": "Each penny buys half as much vellum again.",
+   "revealAt": {
+    "pennies": 120
+   },
+   "boughtLine": "Agnes’s father signs with a cross and a thumbprint, and keeps his word better than most men who can write."
+  },
+  {
+   "id": "window",
+   "name": "A lectern by the window",
+   "period": "North light, steady all day, and no candle smoke.",
+   "chapter": 1,
+   "cost": {
+    "pennies": 320
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:novice",
+     "factor": 1.5
+    },
+    {
+     "kind": "throughput",
+     "target": "worker:scrivener",
+     "factor": 1.3
+    }
+   ],
+   "effectText": "All copyists work faster.",
+   "revealAt": {
+    "pennies": 200
+   },
+   "boughtLine": "The lectern moves to the north window. Nobody needs a candle before four o’clock now, even in December."
+  },
+  {
+   "id": "fairs",
+   "name": "The fair at St Giles",
+   "period": "Nine days of trade, and every stall wants something to read.",
+   "chapter": 1,
+   "cost": {
+    "pennies": 400
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:pedlar",
+     "factor": 1.8
+    }
+   ],
+   "effectText": "Pedlars sell almost twice as many pages.",
+   "revealAt": {
+    "pennies": 260
+   },
+   "boughtLine": "Nine days at St Giles. Hamo comes home sunburned, hoarse, and carrying more pennies than he can count."
+  },
+  {
+   "id": "vitriol",
+   "name": "Green vitriol",
+   "period": "Copperas from the coast turns gall water from brown to black.",
+   "chapter": 2,
+   "cost": {
+    "pennies": 600
+   },
+   "effects": [
+    {
+     "kind": "yield",
+     "target": "action:grind",
+     "factor": 2
+    },
+    {
+     "kind": "throughput",
+     "target": "worker:gatherer",
+     "factor": 1.3
+    }
+   ],
+   "effectText": "Galls give twice the ink by hand.",
+   "revealAt": {
+    "pennies": 400
+   },
+   "boughtLine": "Green crystals from the coast, wrapped in straw. A pinch in the gall water turns it black while you watch."
+  },
+  {
+   "id": "gum",
+   "name": "Gum arabic",
+   "period": "A pinch keeps ink on the page instead of in the gutter.",
+   "chapter": 2,
+   "cost": {
+    "pennies": 900,
+    "ink": 40
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:scrivener",
+     "factor": 1.5
+    }
+   ],
+   "effectText": "Scriveners copy half as much again.",
+   "revealAt": {
+    "ink": 20
+   },
+   "boughtLine": "A lump of amber-coloured gum from a merchant who swears it came from Egypt. It might have. The ink stops running."
+  },
+  {
+   "id": "baskets",
+   "name": "Wicker baskets",
+   "period": "Woven by the gatherers’ mothers, who charge for them.",
+   "chapter": 2,
+   "cost": {
+    "pennies": 1400
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:gatherer",
+     "factor": 1.6
+    }
+   ],
+   "effectText": "Gatherers bring more galls.",
+   "revealAt": {
+    "pennies": 900
+   },
+   "boughtLine": "Forty baskets, and forty mothers paid for weaving them. The gatherers bring home twice as many galls."
+  },
+  {
+   "id": "millrace",
+   "name": "A deeper millrace",
+   "period": "Dug in a dry August, when the Sele runs low.",
+   "chapter": 2,
+   "cost": {
+    "pennies": 5000,
+    "ink": 150
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:miller",
+     "factor": 1.6
+    }
+   ],
+   "effectText": "The mill grinds more than half as much again.",
+   "revealAt": {
+    "ink": 100
+   },
+   "boughtLine": "The Sele is low in August. Twelve men dig for three weeks, and the new race is deep enough to drown a horse."
+  },
+  {
+   "id": "cathedral_order",
+   "name": "The cathedral’s standing order",
+   "period": "Canon Hugh signs for forty horns a quarter.",
+   "chapter": 2,
+   "cost": {
+    "pennies": 3500,
+    "ink": 250
+   },
+   "effects": [
+    {
+     "kind": "yield",
+     "target": "worker:miller",
+     "factor": 1.25
+    },
+    {
+     "kind": "yield",
+     "target": "worker:pedlar",
+     "factor": 1.3
+    }
+   ],
+   "effectText": "The mill and the pedlars both earn more.",
+   "revealAt": {
+    "ink": 150
+   },
+   "boughtLine": "Canon Hugh’s order is written on a single sheet in a beautiful hand, and it will keep the mill turning for a decade."
+  },
+  {
+   "id": "second_desk",
+   "name": "A second scriptorium",
+   "period": "The old weaving shed, whitewashed, with six desks.",
+   "chapter": 2,
+   "cost": {
+    "pennies": 4500
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:novice",
+     "factor": 2
+    },
+    {
+     "kind": "throughput",
+     "target": "worker:scrivener",
+     "factor": 1.5
+    }
+   ],
+   "effectText": "Every copyist has room to work.",
+   "revealAt": {
+    "pennies": 3000
+   },
+   "boughtLine": "The old weaving shed is swept, whitewashed and fitted with six desks. It still smells of lanolin on wet days."
+  },
+  {
+   "id": "iron_gall",
+   "name": "Iron-gall recipe",
+   "period": "Written in the margin of a Bede, in a hand nobody knows.",
+   "chapter": 2,
+   "cost": {
+    "pennies": 8000,
+    "ink": 500
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:gatherer",
+     "factor": 1.8
+    }
+   ],
+   "effectText": "Gatherers make almost twice as much ink.",
+   "revealAt": {
+    "ink": 300
+   },
+   "boughtLine": "Nobody knows who wrote the recipe in the margin of the Bede. You follow it exactly, and it is better than yours."
+  },
+  {
+   "id": "barge",
+   "name": "A barge to the cathedral",
+   "period": "Downstream in a day, upstream in three.",
+   "chapter": 2,
+   "cost": {
+    "pennies": 12000
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:pedlar",
+     "factor": 2
+    },
+    {
+     "kind": "yield",
+     "target": "worker:miller",
+     "factor": 1.3
+    }
+   ],
+   "effectText": "Pages and ink travel farther and sell better.",
+   "revealAt": {
+    "pennies": 7000
+   },
+   "boughtLine": "A flat-bottomed barge called the Margaret, with a patched sail and a boy who knows every shallow in the river."
+  },
+  {
+   "id": "oak_boards",
+   "name": "Oak boards",
+   "period": "Quarter-sawn, so they do not warp on a damp shelf.",
+   "chapter": 3,
+   "cost": {
+    "pennies": 20000
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:binder",
+     "factor": 1.5
+    }
+   ],
+   "effectText": "Binders work half as fast again.",
+   "revealAt": {
+    "books": 2
+   },
+   "boughtLine": "The oak is cut in the forest, seasoned for a winter, and split into boards as thin as a thumb."
+  },
+  {
+   "id": "clasps",
+   "name": "Brass clasps",
+   "period": "A book that shuts tight keeps its shape for a century.",
+   "chapter": 3,
+   "cost": {
+    "pennies": 35000,
+    "books": 5
+   },
+   "effects": [
+    {
+     "kind": "yield",
+     "target": "worker:bookseller",
+     "factor": 1.4
+    }
+   ],
+   "effectText": "Books fetch higher prices.",
+   "revealAt": {
+    "books": 5
+   },
+   "boughtLine": "The brass founder makes clasps shaped like leaves. The books close with a click that customers like to hear."
+  },
+  {
+   "id": "sewing_frame",
+   "name": "A sewing frame",
+   "period": "Five cords, five stations, one needle that never stops.",
+   "chapter": 3,
+   "cost": {
+    "pennies": 45000
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "action:sew",
+     "factor": 3
+    },
+    {
+     "kind": "throughput",
+     "target": "worker:binder",
+     "factor": 1.3
+    }
+   ],
+   "effectText": "Sew three gatherings at a time.",
+   "revealAt": {
+    "pennies": 25000
+   },
+   "boughtLine": "Thomas builds the frame himself from a drawing in his head. It creaks, and it never goes wrong."
+  },
+  {
+   "id": "glue_pot",
+   "name": "A glue pot on the hob",
+   "period": "Hide glue, kept warm from matins to vespers.",
+   "chapter": 3,
+   "cost": {
+    "pennies": 70000
+   },
+   "effects": [
+    {
+     "kind": "thrift",
+     "target": "worker:binder",
+     "factor": 0.8
+    }
+   ],
+   "effectText": "Binders spoil fewer folios.",
+   "revealAt": {
+    "pennies": 40000
+   },
+   "boughtLine": "A black pot of hide glue on the hob, stirred by whoever passes. The whole house smells faintly of horse."
+  },
+  {
+   "id": "shop_sign",
+   "name": "A painted sign",
+   "period": "An inkhorn and a quill, gilded, hung over the lane.",
+   "chapter": 3,
+   "cost": {
+    "pennies": 90000
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:bookseller",
+     "factor": 1.6
+    }
+   ],
+   "effectText": "Booksellers sell more books.",
+   "revealAt": {
+    "pennies": 55000
+   },
+   "boughtLine": "The sign is painted by a man who does inn signs. The inkhorn looks slightly like a pig. Everyone loves it."
+  },
+  {
+   "id": "apprentices",
+   "name": "Indentured apprentices",
+   "period": "Seven years’ board for seven years’ work.",
+   "chapter": 3,
+   "cost": {
+    "pennies": 120000,
+    "books": 10
+   },
+   "effects": [
+    {
+     "kind": "cost",
+     "target": "worker:binder",
+     "factor": 0.7
+    },
+    {
+     "kind": "throughput",
+     "target": "worker:scrivener",
+     "factor": 1.5
+    }
+   ],
+   "effectText": "Binders cost less to hire; scriveners copy more.",
+   "revealAt": {
+    "books": 10
+   },
+   "boughtLine": "Three boys and a girl sign their indentures. The girl signs her own name, which is more than two of the boys can do."
+  },
+  {
+   "id": "catalogue",
+   "name": "A written catalogue",
+   "period": "Every title, its price and its binding, copied fair for each customer.",
+   "chapter": 3,
+   "cost": {
+    "pennies": 160000,
+    "ink": 3000
+   },
+   "effects": [
+    {
+     "kind": "yield",
+     "target": "worker:bookseller",
+     "factor": 1.5
+    }
+   ],
+   "effectText": "Customers buy the dearer bindings.",
+   "revealAt": {
+    "books": 15
+   },
+   "boughtLine": "Margery writes the catalogue fair: every title, its binding and its price. Customers take it home to argue over."
+  },
+  {
+   "id": "cathedral_school",
+   "name": "The cathedral school’s list",
+   "period": "Donatus, Cato, the psalter, and the Doctrinale for older boys.",
+   "chapter": 3,
+   "cost": {
+    "pennies": 220000
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:binder",
+     "factor": 1.8
+    },
+    {
+     "kind": "throughput",
+     "target": "worker:miller",
+     "factor": 1.5
+    }
+   ],
+   "effectText": "Binders and the mill both work harder.",
+   "revealAt": {
+    "books": 20
+   },
+   "boughtLine": "The schoolmaster’s list is long and in poor Latin. You bind every book on it, and correct the Latin on the spines."
+  },
+  {
+   "id": "borrowers_roll",
+   "name": "A borrowers’ roll",
+   "period": "Name, book, pledge and date, in a hand anyone can read.",
+   "chapter": 4,
+   "cost": {
+    "pennies": 300000
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:librarian",
+     "factor": 1.5
+    }
+   ],
+   "effectText": "Librarians lend more books.",
+   "revealAt": {
+    "renown": 20
+   },
+   "boughtLine": "The roll has four columns: name, book, pledge and date. Margery rules them in red, so nobody can pretend not to see."
+  },
+  {
+   "id": "chains",
+   "name": "Lighter chains",
+   "period": "Long enough to carry a book to the window.",
+   "chapter": 4,
+   "cost": {
+    "pennies": 450000,
+    "books": 20
+   },
+   "effects": [
+    {
+     "kind": "thrift",
+     "target": "worker:librarian",
+     "factor": 0.5
+    }
+   ],
+   "effectText": "Books wear out half as fast.",
+   "revealAt": {
+    "renown": 60
+   },
+   "boughtLine": "The chains are long enough now to reach the window. Readers can see what they are reading."
+  },
+  {
+   "id": "candles",
+   "name": "Beeswax candles",
+   "period": "They cost four times as much as tallow and do not stink.",
+   "chapter": 4,
+   "cost": {
+    "pennies": 600000,
+    "renown": 100
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:lector",
+     "factor": 1.5
+    },
+    {
+     "kind": "yield",
+     "target": "action:read",
+     "factor": 2
+    }
+   ],
+   "effectText": "Evening lessons run later.",
+   "revealAt": {
+    "renown": 120
+   },
+   "boughtLine": "Beeswax, bought from the abbey hives. The lessons go on till nine, and no one’s eyes water."
+  },
+  {
+   "id": "benches",
+   "name": "Benches in the lane",
+   "period": "Built by the wheelwright, who wants his sons taught.",
+   "chapter": 4,
+   "cost": {
+    "pennies": 800000
+   },
+   "effects": [
+    {
+     "kind": "yield",
+     "target": "worker:librarian",
+     "factor": 1.5
+    }
+   ],
+   "effectText": "Borrowers bring back more renown.",
+   "revealAt": {
+    "renown": 250
+   },
+   "boughtLine": "The wheelwright builds six benches for the lane, and his three sons learn to read on them."
+  },
+  {
+   "id": "horn_books",
+   "name": "Horn books",
+   "period": "An alphabet under a sheet of horn, on a paddle a child can hold.",
+   "chapter": 4,
+   "cost": {
+    "pennies": 1000000,
+    "ink": 20000
+   },
+   "effects": [
+    {
+     "kind": "yield",
+     "target": "worker:lector",
+     "factor": 1.6
+    }
+   ],
+   "effectText": "Pupils learn faster.",
+   "revealAt": {
+    "renown": 400
+   },
+   "boughtLine": "An alphabet under a sheet of scraped horn, on a wooden paddle. The children chew the handles."
+  },
+  {
+   "id": "reading_room",
+   "name": "A reading room",
+   "period": "The granary above the shop, floored and glazed.",
+   "chapter": 4,
+   "cost": {
+    "pennies": 1500000,
+    "renown": 600
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:librarian",
+     "factor": 1.8
+    },
+    {
+     "kind": "throughput",
+     "target": "worker:bookseller",
+     "factor": 1.4
+    }
+   ],
+   "effectText": "More readers, more buyers.",
+   "revealAt": {
+    "renown": 600
+   },
+   "boughtLine": "The granary is floored and glazed. On the first day, a cat moves in and refuses to leave."
+  },
+  {
+   "id": "fair_copies",
+   "name": "Fair copies for loan",
+   "period": "Plain books, meant to be read to pieces.",
+   "chapter": 4,
+   "cost": {
+    "pennies": 2000000,
+    "books": 60
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:binder",
+     "factor": 1.6
+    },
+    {
+     "kind": "throughput",
+     "target": "worker:scrivener",
+     "factor": 1.4
+    }
+   ],
+   "effectText": "The bindery and the desks work faster.",
+   "revealAt": {
+    "renown": 900
+   },
+   "boughtLine": "Plain books in limp vellum, meant to be read until they fall apart. Most of them do."
+  },
+  {
+   "id": "guild_hall",
+   "name": "Lessons at the guild hall",
+   "period": "The drapers want their apprentices to reckon and read.",
+   "chapter": 4,
+   "cost": {
+    "pennies": 3000000,
+    "renown": 1200
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:lector",
+     "factor": 1.8
+    }
+   ],
+   "effectText": "Lectors teach more pupils.",
+   "revealAt": {
+    "renown": 1300
+   },
+   "boughtLine": "The drapers clear their hall on Tuesday nights. Their apprentices learn to read by reading the guild’s own rules."
+  },
+  {
+   "id": "rag_merchant",
+   "name": "A rag merchant",
+   "period": "Old linen from three counties, sorted by colour.",
+   "chapter": 5,
+   "cost": {
+    "pennies": 2500000
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:papermaker",
+     "factor": 1.4
+    }
+   ],
+   "effectText": "Papermakers never wait for rags.",
+   "revealAt": {
+    "paper": 10
+   },
+   "boughtLine": "The rag merchant’s cart arrives every Monday with a smell you learn not to mention."
+  },
+  {
+   "id": "linseed_ink",
+   "name": "Linseed printing ink",
+   "period": "Lampblack and boiled oil. Pieter will not say how long he boils it.",
+   "chapter": 5,
+   "cost": {
+    "pennies": 3500000,
+    "ink": 40000
+   },
+   "effects": [
+    {
+     "kind": "thrift",
+     "target": "worker:pressman",
+     "factor": 0.7
+    },
+    {
+     "kind": "yield",
+     "target": "action:pull",
+     "factor": 1.5
+    }
+   ],
+   "effectText": "Presses use less paper and ink.",
+   "revealAt": {
+    "type": 5
+   },
+   "boughtLine": "Pieter boils the oil in the yard, at night, alone. The ink is thick as treacle and black as a sermon."
+  },
+  {
+   "id": "hard_metal",
+   "name": "Hard type metal",
+   "period": "Lead, tin and antimony, which Pieter calls his secret.",
+   "chapter": 5,
+   "cost": {
+    "pennies": 5000000
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:founder",
+     "factor": 1.7
+    }
+   ],
+   "effectText": "Founders cast more type.",
+   "revealAt": {
+    "type": 30
+   },
+   "boughtLine": "Lead, tin and a grey metal Pieter will not name. The new letters ring when you drop them."
+  },
+  {
+   "id": "second_press",
+   "name": "A second press",
+   "period": "Built by the shipwright from Pieter’s drawing.",
+   "chapter": 5,
+   "cost": {
+    "pennies": 8000000,
+    "renown": 2000
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:pressman",
+     "factor": 1.5
+    }
+   ],
+   "effectText": "Pressmen print half as much again.",
+   "revealAt": {
+    "folios": 3000
+   },
+   "boughtLine": "The shipwright builds the second press from Pieter’s drawing and charges as if it were a ship."
+  },
+  {
+   "id": "folding_table",
+   "name": "A folding table",
+   "period": "Long enough for four boys to fold a whole edition.",
+   "chapter": 5,
+   "cost": {
+    "pennies": 6000000
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:binder",
+     "factor": 2
+    }
+   ],
+   "effectText": "Binders keep up with the press.",
+   "revealAt": {
+    "folios": 2000
+   },
+   "boughtLine": "A table as long as a church pew, and four boys to fold at it. They race each other and fold faster than the press prints."
+  },
+  {
+   "id": "vatman",
+   "name": "A master vatman",
+   "period": "He can lay a sheet as thin as a leaf and as even as a pond.",
+   "chapter": 5,
+   "cost": {
+    "pennies": 10000000
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:papermaker",
+     "factor": 1.8
+    }
+   ],
+   "effectText": "Papermakers make more paper.",
+   "revealAt": {
+    "paper": 400
+   },
+   "boughtLine": "The vatman is a quiet Fleming who lays a sheet with one movement of his wrists, like a man shaking out a cloth."
+  },
+  {
+   "id": "title_pages",
+   "name": "Printed title pages",
+   "period": "The book says who made it, and where to buy another.",
+   "chapter": 5,
+   "cost": {
+    "pennies": 14000000,
+    "books": 400
+   },
+   "effects": [
+    {
+     "kind": "yield",
+     "target": "worker:bookseller",
+     "factor": 1.8
+    }
+   ],
+   "effectText": "Books sell for more.",
+   "revealAt": {
+    "books": 300
+   },
+   "boughtLine": "The first printed title page says Hollinford at the Sign of the Inkhorn. People buy the book just to own that line."
+  },
+  {
+   "id": "night_shift",
+   "name": "Lamps for a night shift",
+   "period": "The press never cools now.",
+   "chapter": 5,
+   "cost": {
+    "pennies": 20000000,
+    "renown": 5000
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:pressman",
+     "factor": 1.6
+    },
+    {
+     "kind": "throughput",
+     "target": "worker:founder",
+     "factor": 1.3
+    }
+   ],
+   "effectText": "The press runs through the night.",
+   "revealAt": {
+    "books": 800
+   },
+   "boughtLine": "Lamps along the pressroom walls. The press never cools now, and the neighbours stop complaining and start working there."
+  },
+  {
+   "id": "river_wharf",
+   "name": "A wharf on the Sele",
+   "period": "Stone steps down to the water, and a crane.",
+   "chapter": 6,
+   "cost": {
+    "pennies": 40000000
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:carter",
+     "factor": 1.5
+    }
+   ],
+   "effectText": "Carters move more books.",
+   "revealAt": {
+    "books": 100
+   },
+   "boughtLine": "Stone steps, a crane and a warehouse. The Margaret has four sisters now, all flat-bottomed and all patched."
+  },
+  {
+   "id": "fair_privilege",
+   "name": "A fair privilege",
+   "period": "Your books sold at every chartered fair without toll.",
+   "chapter": 6,
+   "cost": {
+    "pennies": 60000000,
+    "renown": 20000
+   },
+   "effects": [
+    {
+     "kind": "yield",
+     "target": "worker:carter",
+     "factor": 1.5
+    }
+   ],
+   "effectText": "Carters earn more for each book.",
+   "revealAt": {
+    "renown": 1000
+   },
+   "boughtLine": "The privilege comes on parchment with a seal. Toll keepers read it slowly and wave the carts through."
+  },
+  {
+   "id": "type_foundry",
+   "name": "A type foundry",
+   "period": "Six casters, and a furnace that is never let out.",
+   "chapter": 6,
+   "cost": {
+    "pennies": 80000000
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:founder",
+     "factor": 2
+    },
+    {
+     "kind": "throughput",
+     "target": "worker:pressman",
+     "factor": 1.3
+    }
+   ],
+   "effectText": "More type, more presses.",
+   "revealAt": {
+    "pennies": 50000000
+   },
+   "boughtLine": "Six casters and a furnace that is never let out. The foundry has its own well, and its own saint’s day."
+  },
+  {
+   "id": "paper_mill",
+   "name": "A paper mill at the weir",
+   "period": "The wheel Aldous built for ink turns the stampers now.",
+   "chapter": 6,
+   "cost": {
+    "pennies": 90000000
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:papermaker",
+     "factor": 2.2
+    }
+   ],
+   "effectText": "Paper is plentiful.",
+   "revealAt": {
+    "paper": 5000
+   },
+   "boughtLine": "The wheel Aldous built for ink turns the stampers now. He comes to watch it every morning until he dies."
+  },
+  {
+   "id": "almanacs",
+   "name": "Almanacs",
+   "period": "Saints’ days, moons and fairs for the coming year. Everyone buys one.",
+   "chapter": 6,
+   "cost": {
+    "pennies": 120000000,
+    "books": 3000
+   },
+   "effects": [
+    {
+     "kind": "yield",
+     "target": "worker:carter",
+     "factor": 1.6
+    },
+    {
+     "kind": "yield",
+     "target": "action:cry",
+     "factor": 2
+    }
+   ],
+   "effectText": "Cheap books sell everywhere.",
+   "revealAt": {
+    "books": 2000
+   },
+   "boughtLine": "Saints’ days, moons, fairs and tides for the year to come. Everyone buys one, and everyone argues with it."
+  },
+  {
+   "id": "bindery_hall",
+   "name": "A bindery hall",
+   "period": "Forty binders under one roof, and a foreman who shouts.",
+   "chapter": 6,
+   "cost": {
+    "pennies": 150000000
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:binder",
+     "factor": 2.5
+    }
+   ],
+   "effectText": "Binders keep pace with the city’s presses.",
+   "revealAt": {
+    "pennies": 90000000
+   },
+   "boughtLine": "Forty binders under one roof, and a foreman named Joan who can hear a crooked stitch from the door."
+  },
+  {
+   "id": "schoolrooms",
+   "name": "Schoolrooms in every parish",
+   "period": "Readers make buyers.",
+   "chapter": 6,
+   "cost": {
+    "pennies": 200000000,
+    "renown": 60000
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:lector",
+     "factor": 2
+    },
+    {
+     "kind": "yield",
+     "target": "worker:librarian",
+     "factor": 2
+    }
+   ],
+   "effectText": "Renown grows across the city.",
+   "revealAt": {
+    "renown": 40000
+   },
+   "boughtLine": "A schoolroom in every parish of the city, each with a shelf of books from your presses and a teacher paid from your profits."
+  },
+  {
+   "id": "roads",
+   "name": "The mended roads",
+   "period": "Paid for by the printing houses, for once, instead of the tolls.",
+   "chapter": 6,
+   "cost": {
+    "pennies": 300000000,
+    "renown": 100000
+   },
+   "effects": [
+    {
+     "kind": "throughput",
+     "target": "worker:carter",
+     "factor": 2
+    }
+   ],
+   "effectText": "Carters reach every town on the Sele.",
+   "revealAt": {
+    "renown": 80000
+   },
+   "boughtLine": "The printing houses pay to mend the roads. It is the first time anyone in the county has seen a road mended willingly."
+  }
+ ],
+ "chapters": [
+  {
+   "number": 1,
+   "title": "The Quill",
+   "initial": "O",
+   "work": "copying",
+   "opening": "One candle, one quill, three skins of vellum, and a letter from the abbot: he wants a psalter by Lent.",
+   "goalText": "Copy the abbot’s psalter",
+   "goalResource": "folios",
+   "goalAmount": 200,
+   "triggers": [
+    {
+     "choiceId": "herbal",
+     "at": 0.4
+    },
+    {
+     "choiceId": "tithe",
+     "at": 0.8
+    }
+   ],
+   "endLine": "The psalter goes up to the abbey wrapped in a clean cloth. The abbot turns every page and pays in silver.",
+   "noteLine": "The psalter is finished. Chapter two waits in the ledger.",
+   "beats": [
+    {
+     "at": 0.06,
+     "text": "The first page is crooked. You scrape it back and begin again, and the second is better."
+    },
+    {
+     "at": 0.1,
+     "text": "A wet week. The vellum cockles on the desk and the lines wander like a man walking home from the tavern. You weight the corners with stones from the river."
+    },
+    {
+     "at": 0.15,
+     "text": "The abbot's letter is pinned above the desk. Lent is eleven weeks away. The candle is a finger shorter every night."
+    },
+    {
+     "at": 0.22,
+     "text": "The abbot's steward calls to see how the psalter goes. He counts the finished leaves twice, moving his lips, and leaves without a word."
+    },
+    {
+     "at": 0.28,
+     "text": "Your hand has stopped aching by the end of the day. It aches by the middle of it instead, which is progress of a kind."
+    },
+    {
+     "at": 0.35,
+     "text": "A mouse has been eating the paste on the spare quires. You set out a saucer of milk for the abbey cat and wait for justice."
+    },
+    {
+     "at": 0.47,
+     "text": "Candlemas. The abbey bells ring before dawn, and every desk in the house is lit before they stop."
+    },
+    {
+     "at": 0.55,
+     "text": "Someone in the lane has started calling this the scribe's house. The name is written on nothing, and everyone uses it."
+    },
+    {
+     "at": 0.62,
+     "text": "The capitals go in red, then in blue. Nobody in the lane has seen blue ink before, and children press their noses to the window to look at it."
+    },
+    {
+     "at": 0.68,
+     "text": "Frost on the inside of the window. The ink thickens in the horn and has to be warmed on the hob before anyone can write."
+    },
+    {
+     "at": 0.75,
+     "text": "Your eyes tire before your hand does now. You copy the hardest psalms in the morning and leave the easy ones for the lamp."
+    },
+    {
+     "at": 0.86,
+     "text": "Ash Wednesday. The abbot sends word that he will want the psalter at Easter instead, and then, the same afternoon, that he will not."
+    },
+    {
+     "at": 0.92,
+     "text": "The last gathering of the psalter is ruled and pricked. You leave the final line until morning, when the light is best."
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "title": "The Ink Mill",
+   "initial": "T",
+   "work": "grinding",
+   "opening": "The ink runs short before the vellum does now, and old Aldous has a mill on the Sele that grinds nothing but barley.",
+   "goalText": "Grind a winter’s ink for the diocese",
+   "goalResource": "ink",
+   "goalAmount": 8500,
+   "triggers": [
+    {
+     "choiceId": "river",
+     "at": 0.4
+    },
+    {
+     "choiceId": "galls",
+     "at": 0.8
+    }
+   ],
+   "endLine": "The last cask of ink goes down the river to the cathedral, sealed with wax and your mark.",
+   "noteLine": "The ink mill is finished. Chapter three waits in the ledger.",
+   "beats": [
+    {
+     "at": 0.08,
+     "text": "Aldous walks you round his mill with his thumbs in his belt. The wheel is older than he is, and louder."
+    },
+    {
+     "at": 0.13,
+     "text": "Oak galls must be picked before the wasp inside them hatches. The gatherers can tell by shaking one next to their ear."
+    },
+    {
+     "at": 0.2,
+     "text": "A barrel of spoiled ink goes into the Sele by mistake. For a mile downstream the water runs black, and the heron leaves for a week."
+    },
+    {
+     "at": 0.25,
+     "text": "The recipe has four parts: galls, vitriol, gum and patience. Only the first three can be bought."
+    },
+    {
+     "at": 0.3,
+     "text": "The children who pick galls have made up a song about you. It rhymes scribe with bribe, which is unkind and not untrue."
+    },
+    {
+     "at": 0.35,
+     "text": "Aldous's wife brings bread and cheese down to the mill at noon, and stays to tell you everything that is wrong with the wheel."
+    },
+    {
+     "at": 0.43,
+     "text": "Aldous keeps a tally stick for every cask, notched with his knife. By midsummer he needs a second stick, and by Lammas a bundle."
+    },
+    {
+     "at": 0.47,
+     "text": "A monastery in the north writes to ask for the recipe for your ink. You send them a cask instead, and keep the recipe."
+    },
+    {
+     "at": 0.55,
+     "text": "The cathedral's precentor tests your ink with a drop of vinegar. It does not fade. He nods once, which from him is a sermon."
+    },
+    {
+     "at": 0.62,
+     "text": "The Sele floods in March and the mill stands in water to the axle. The wheel turns faster than it ever has, and nobody can reach it."
+    },
+    {
+     "at": 0.66,
+     "text": "A dyer from the coast offers twice the price for your ink, to dye cloth with. You sell him the dregs, and his cloth comes out the grey of a wet Sunday."
+    },
+    {
+     "at": 0.7,
+     "text": "Every desk in Hollinford that has ink on it now has your ink on it. Merchants write their tallies in it, and lovers their letters."
+    },
+    {
+     "at": 0.75,
+     "text": "Every cask now carries a small inkhorn burned into the lid. Coopers in three towns have started burning the same mark into theirs."
+    },
+    {
+     "at": 0.85,
+     "text": "Fingers in Hollinford are black to the second knuckle. At Mass you can tell the mill hands by the way they fold them."
+    },
+    {
+     "at": 0.9,
+     "text": "The mill runs all night now. You fall asleep to the sound of the wheel and wake when it stops for the Sunday."
+    },
+    {
+     "at": 0.95,
+     "text": "The last casks are rolled onto the barge in the rain. The gall pickers' song about you has a new verse, and it is almost kind."
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "title": "The Bindery",
+   "initial": "F",
+   "work": "binding",
+   "opening": "Folios lie in loose drifts on every shelf, and the cathedral school wants books, sewn and boarded, by Michaelmas.",
+   "goalText": "Bind books for the cathedral school",
+   "goalResource": "books",
+   "goalAmount": 2300,
+   "triggers": [
+    {
+     "choiceId": "chains",
+     "at": 0.4
+    },
+    {
+     "choiceId": "seal",
+     "at": 0.8
+    }
+   ],
+   "endLine": "The school’s books leave in nine carts, a ton of oak and vellum, and the schoolmaster weeps a little.",
+   "noteLine": "The bindery is finished. Chapter four waits in the ledger.",
+   "beats": [
+    {
+     "at": 0.07,
+     "text": "The binder from York is called Thomas Fell. He talks to his needles, and swears at the glue, and never once at a book."
+    },
+    {
+     "at": 0.12,
+     "text": "Books need boards, boards need oak, and the only oak worth cutting belongs to the abbey. The abbot sells you six trees and blesses the saw."
+    },
+    {
+     "at": 0.18,
+     "text": "A gathering sewn backwards. The whole book has to be pulled apart, and Thomas does not speak for the rest of the day."
+    },
+    {
+     "at": 0.24,
+     "text": "Harvest. Half the house goes to the fields for a fortnight, and the other half does the work of both and complains about it at length."
+    },
+    {
+     "at": 0.3,
+     "text": "Your first finished book sits on the shelf by the door. Customers come in to buy pages and stay to look at it."
+    },
+    {
+     "at": 0.36,
+     "text": "A binder's bench has seventeen tools on it. By the end of the month you know the names of eleven, and what four of them are for."
+    },
+    {
+     "at": 0.43,
+     "text": "A traveller from Oxford turns a book over in his hands and asks who taught your binders. You say nobody did. He does not believe you, and buys two."
+    },
+    {
+     "at": 0.47,
+     "text": "A customer brings back a book because the clasp sticks. It is mended in less time than he takes to finish complaining."
+    },
+    {
+     "at": 0.51,
+     "text": "The oak boards warp in a wet week and the clasps will not meet. Every book on the shelf spends three days under a millstone until the weather turns."
+    },
+    {
+     "at": 0.55,
+     "text": "The schoolmaster calls in person. He holds each book to his nose before he opens it, because a good book smells of oak and ink."
+    },
+    {
+     "at": 0.62,
+     "text": "The Michaelmas geese are driven down the lane to market. One of them walks into the bindery and eats a gathering of Donatus."
+    },
+    {
+     "at": 0.68,
+     "text": "Margery keeps a list of who asks for what. Psalters for widows, grammars for boys, and for the miller, a book of songs."
+    },
+    {
+     "at": 0.75,
+     "text": "The schoolmaster sends the names of forty boys who will need grammars next year. Beside three of the names he has written: will need two."
+    },
+    {
+     "at": 0.85,
+     "text": "Candles burn all night in the bindery now. From the lane it looks like a church on a feast day."
+    },
+    {
+     "at": 0.9,
+     "text": "Nine carts are hired for the school's delivery, and a boy to walk ahead of them shouting that they are coming."
+    },
+    {
+     "at": 0.95,
+     "text": "The last book for the school is finished at midnight. Someone writes the date inside its back board with a lead point, where only a binder would look."
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "title": "The Lending Library",
+   "initial": "B",
+   "work": "lending",
+   "opening": "Books come back to the shop with thumbprints and questions, and people start to ask whether they might borrow one.",
+   "goalText": "Earn the town’s trust",
+   "goalResource": "renown",
+   "goalAmount": 90000,
+   "triggers": [
+    {
+     "choiceId": "borrow",
+     "at": 0.4
+    },
+    {
+     "choiceId": "commentary",
+     "at": 0.8
+    }
+   ],
+   "endLine": "The borrowers’ roll runs to nine hundred names. Half of them signed it themselves.",
+   "noteLine": "The lending library is finished. Chapter five waits in the ledger.",
+   "beats": [
+    {
+     "at": 0.06,
+     "text": "The lending room is the old wool loft. It smells of sheep for a month, and then of books for ever."
+    },
+    {
+     "at": 0.11,
+     "text": "The pledge for a borrowed book is a knife, a belt or a shilling. By the end of the first week the shop holds nine knives and no shillings."
+    },
+    {
+     "at": 0.18,
+     "text": "A tanner's apprentice returns a book he cannot read and asks, very quietly, whether anyone here could teach him."
+    },
+    {
+     "at": 0.24,
+     "text": "A carter borrows a book of hours for his mother, who is dying. A month later he asks to buy it, and you let him have it for the price of the binding."
+    },
+    {
+     "at": 0.3,
+     "text": "The first book not returned. A herbal, borrowed by a woman from Ashby. Margery goes to fetch it and comes back with a basket of eggs."
+    },
+    {
+     "at": 0.35,
+     "text": "Someone writes in the margin of a borrowed Boethius: this is true. Someone else writes underneath: it is not. The argument runs on for six pages."
+    },
+    {
+     "at": 0.43,
+     "text": "A girl of nine asks to borrow the thickest book in the room. It is a book of canon law. She brings it back in a week and asks for another like it."
+    },
+    {
+     "at": 0.47,
+     "text": "The town reeve asks whether the lending room keeps a list of who reads what. It does, and the list is kept in a locked chest that he does not have the key to."
+    },
+    {
+     "at": 0.51,
+     "text": "The priest at St Mary's complains from the pulpit that half his congregation now follow the Mass in their own primers, and tell him when he skips a line."
+    },
+    {
+     "at": 0.55,
+     "text": "On a wet Thursday there are more people in the reading room than in the tavern. The landlord comes to see why."
+    },
+    {
+     "at": 0.6,
+     "text": "Rain comes through the loft roof onto the histories. Half the town turns out with pans and buckets, and not one book is lost."
+    },
+    {
+     "at": 0.66,
+     "text": "Brother Osric teaches letters with a slate and a stick of chalk. His pupils range in age from six to seventy-one."
+    },
+    {
+     "at": 0.7,
+     "text": "A borrower returns a book with a pressed violet between two leaves. Nobody takes it out. It is still there forty years later, when the book falls apart."
+    },
+    {
+     "at": 0.73,
+     "text": "A woman walks eleven miles from Ashby to return a book on the day it is due, and walks eleven miles home with the next volume."
+    },
+    {
+     "at": 0.86,
+     "text": "The lending room has a smell now, of tallow and damp wool and old vellum. The children who grew up in it will spend their lives looking for it again."
+    },
+    {
+     "at": 0.92,
+     "text": "The borrowers' roll fills its last page. A new roll is started, and the old one is kept in the aumbry like a relic."
+    },
+    {
+     "at": 0.96,
+     "text": "Margery reads the whole roll aloud at the year's end, every name, and it takes her from vespers until the candles are out."
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "title": "The Press",
+   "initial": "A",
+   "work": "printing",
+   "opening": "A crate comes up the river from Mainz: a screw press in pieces, a case of type, and a printer named Pieter who speaks no English.",
+   "goalText": "Print the first edition",
+   "goalResource": "books",
+   "goalAmount": 46000,
+   "triggers": [
+    {
+     "choiceId": "strike",
+     "at": 0.4
+    },
+    {
+     "choiceId": "patent",
+     "at": 0.8
+    }
+   ],
+   "endLine": "Forty thousand copies of one book, every page the same. Pieter gets drunk for the first time anyone has seen.",
+   "noteLine": "The first edition is printed. Chapter six waits in the ledger.",
+   "beats": [
+    {
+     "at": 0.05,
+     "text": "Pieter assembles the press in the yard, piece by piece, with a mallet and no drawings. By dusk it stands taller than he does."
+    },
+    {
+     "at": 0.1,
+     "text": "Pieter's English is three words: good, again and beer. For the first month they are enough."
+    },
+    {
+     "at": 0.16,
+     "text": "The first proof comes off the press with every letter backwards. Pieter laughs until he has to sit down. The forme is turned."
+    },
+    {
+     "at": 0.22,
+     "text": "The oldest scribe watches the press from the doorway with his arms folded, and says a machine cannot love a letter. Pieter, who does not understand, agrees warmly."
+    },
+    {
+     "at": 0.28,
+     "text": "Two hundred identical pages hang drying on lines across the loft. The scribes come up to look at them and do not say anything."
+    },
+    {
+     "at": 0.34,
+     "text": "Paper comes up the river in reams. It is cheaper than vellum and does not smell, and for the first time in years the tanner's yard is quiet."
+    },
+    {
+     "at": 0.43,
+     "text": "The type lives in a case of a hundred little boxes, capitals above and small letters below. The boys call them the upper case and the lower case, and soon so does everyone."
+    },
+    {
+     "at": 0.47,
+     "text": "One letter is set upside down in the first sheet. Two hundred copies are pulped, and one is kept, pinned above the composing stone, as a warning."
+    },
+    {
+     "at": 0.51,
+     "text": "Sheets dry on lines in every loft, and when the wind is from the east the whole street smells of wet linen and lamp black."
+    },
+    {
+     "at": 0.55,
+     "text": "A bookseller from London arrives with a letter of credit and orders five hundred copies of a book you have not printed yet."
+    },
+    {
+     "at": 0.58,
+     "text": "A scribe copies a printed book by hand, to prove that he can, and takes eleven weeks. Pieter buys the copy from him and keeps it by his bed."
+    },
+    {
+     "at": 0.62,
+     "text": "Pieter learns the English for ink, paper, type and money, in that order. He teaches the pressmen the German for all four, and several other words besides."
+    },
+    {
+     "at": 0.68,
+     "text": "Type wears. The a goes first, then the e. Pieter melts the worn letters and casts them again, and the book goes on."
+    },
+    {
+     "at": 0.74,
+     "text": "A travelling friar preaches in the square that printed books are the devil's work, because no hand could make two pages so alike. He buys two on his way out of town."
+    },
+    {
+     "at": 0.85,
+     "text": "The press runs from first light to last. When it stops for the night, the silence wakes the babies in the lane."
+    },
+    {
+     "at": 0.9,
+     "text": "Every room in the house has paper in it. Paper on the stairs, paper in the kitchen, paper under Pieter's bed."
+    },
+    {
+     "at": 0.95,
+     "text": "Pieter pulls the last sheet of the edition himself, signs it on the back in German, and will not say what he wrote."
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "title": "The Printing City",
+   "initial": "H",
+   "work": "printing",
+   "opening": "Hollinford has seven presses now, and every one of them is yours or owes you money.",
+   "goalText": "Carry books to every town on the Sele",
+   "goalResource": "renown",
+   "goalAmount": 950000,
+   "triggers": [
+    {
+     "choiceId": "edition",
+     "at": 0.6
+    }
+   ],
+   "endLine": "The last cart comes home empty from the last town on the river.",
+   "noteLine": "The printing city is finished. The last page waits in the ledger.",
+   "beats": [
+    {
+     "at": 0.05,
+     "text": "There is a Printers' Row in Hollinford now, and a Paper Lane, and a tavern called the Forme and Quoin."
+    },
+    {
+     "at": 0.1,
+     "text": "The town gates are too narrow for the paper carts. The council meets to widen them, and has the minutes of the meeting printed."
+    },
+    {
+     "at": 0.14,
+     "text": "Hollinford's paper mills take the whole river now. Downstream, the millers of Ashby complain that the Sele runs white on Mondays."
+    },
+    {
+     "at": 0.18,
+     "text": "A town downriver bans your almanac for predicting rain on its fair day. It rains. They order two hundred copies for next year."
+    },
+    {
+     "at": 0.24,
+     "text": "A ballad seller cries the news of a battle in the market square an hour before the king's messenger rides in with it. Both of them are reading from your paper."
+    },
+    {
+     "at": 0.3,
+     "text": "Children in the square play at printing: one inks a flat stone, one presses a leaf, and the others shout that it is a book."
+    },
+    {
+     "at": 0.34,
+     "text": "An apprentice is caught printing ballads at night on his master's press. The ballads are very rude and sell very well, and the master takes half."
+    },
+    {
+     "at": 0.38,
+     "text": "You walk down Printers' Row at dusk and count the lit windows. You lose count at sixty, start again, and lose count again."
+    },
+    {
+     "at": 0.45,
+     "text": "The first boy who ever copied a line at your second desk is a master printer now, with a shop and an apprentice of his own."
+    },
+    {
+     "at": 0.5,
+     "text": "Thomas Fell dies at his sewing frame with a needle in his hand. Forty binders follow his coffin, and every shop on the Row closes."
+    },
+    {
+     "at": 0.55,
+     "text": "The bells of St Mary's are recast, and the founder who pours them learned his trade casting type in your foundry."
+    },
+    {
+     "at": 0.63,
+     "text": "Snow shuts the roads for a month. The presses run anyway, and when the thaw comes the carters leave in a line a mile long."
+    },
+    {
+     "at": 0.67,
+     "text": "The printers of the city agree to form a company, and ask you to be its first warden. You refuse twice, as custom requires, and accept on the third asking."
+    },
+    {
+     "at": 0.71,
+     "text": "The bishop's court sends a list of books that may not be printed. The list is printed in Hollinford, and sells better than most of the books on it."
+    },
+    {
+     "at": 0.75,
+     "text": "Pieter's eyes are failing. He sets type by touch now, and makes fewer mistakes than the boys who can see."
+    },
+    {
+     "at": 0.79,
+     "text": "There are more books in Hollinford than people now. Somebody on the council counted, and then had the count printed."
+    },
+    {
+     "at": 0.83,
+     "text": "A bookseller in Bruges writes to ask whether Hollinford is a real place or a printer's joke. You send him an almanac with the town's tides and fairs in it."
+    },
+    {
+     "at": 0.87,
+     "text": "A child asks you what the town was like before the presses. You try to tell her, and find you have forgotten what it sounded like."
+    },
+    {
+     "at": 0.9,
+     "text": "Letters come from towns you have never visited, addressed only to the Inkhorn, Hollinford, and they arrive."
+    },
+    {
+     "at": 0.95,
+     "text": "The carters set out for the last towns on the Sele with the spring floods. You watch the first cart from the wharf until it is out of sight."
+    }
+   ]
+  }
+ ],
+ "choices": [
+  {
+   "id": "herbal",
+   "chapter": 1,
+   "title": "The forbidden herbal",
+   "openLine": "Brother Osric brings a herbal the bishop has forbidden.",
+   "passage": "Brother Osric comes after compline with something under his habit. It is a herbal, forty leaves of it, with drawings of feverfew and henbane and a recipe for bringing down a fever that the bishop has called witchcraft. “The women in the lanes use it anyway,” he says, “and they use it wrong. A good copy would save lives.” He does not say whose lives, or what the bishop does to scribes. The candle gutters. You have vellum enough for one book tonight, and it could be this one.",
+   "options": [
+    {
+     "id": "candle",
+     "label": "Copy it by candlelight",
+     "consequence": "Pages of remedies sell well in the lanes: pedlars earn more, and the abbey starts to watch you.",
+     "leaning": "commons",
+     "effects": [
+      {
+       "kind": "yield",
+       "target": "worker:pedlar",
+       "factor": 1.3
+      },
+      {
+       "kind": "throughput",
+       "target": "worker:novice",
+       "factor": 0.9
+      }
+     ],
+     "line": "You copied the herbal by candlelight. The pages went out to the lanes folded inside psalms."
+    },
+    {
+     "id": "burn",
+     "label": "Burn it in the abbey kitchen",
+     "consequence": "The abbot sees you do it. Novices are sent to you gladly and copy harder.",
+     "leaning": "cloister",
+     "effects": [
+      {
+       "kind": "throughput",
+       "target": "worker:novice",
+       "factor": 1.3
+      },
+      {
+       "kind": "yield",
+       "target": "worker:pedlar",
+       "factor": 0.9
+      }
+     ],
+     "line": "You burned the herbal in the abbey kitchen. Brother Osric did not speak to you for a month."
+    },
+    {
+     "id": "bishop",
+     "label": "Send it to the bishop’s court",
+     "consequence": "The bishop’s clerk rewards the report: vellum comes cheaper, and the lanes remember who told.",
+     "leaning": "crown",
+     "effects": [
+      {
+       "kind": "yield",
+       "target": "worker:tanner",
+       "factor": 1.3
+      },
+      {
+       "kind": "yield",
+       "target": "action:sell",
+       "factor": 0.9
+      }
+     ],
+     "line": "You sent the herbal to the bishop’s court. A clerk wrote your name in a book of loyal men."
+    }
+   ]
+  },
+  {
+   "id": "tithe",
+   "chapter": 1,
+   "title": "The abbot’s tithe",
+   "openLine": "The abbot asks a tithe of every tenth folio.",
+   "passage": "The psalter is nearly done when the cellarer arrives with a wax tablet and a smile. The abbey, he explains, has always had a tenth of the work done within sight of its bells. Your shop is within sight of its bells. He would take the tenth in folios, freshly written, for the abbey’s own library; or in coin, if you prefer, at a price he names and you think unkind. Across the lane, the sheriff’s man is listening with interest. He says the abbey’s rights stop at the abbey wall.",
+   "options": [
+    {
+     "id": "pay",
+     "label": "Give the tenth gladly",
+     "consequence": "Monks sit with your scriveners in the long evenings and teach them the old hands.",
+     "leaning": "cloister",
+     "effects": [
+      {
+       "kind": "throughput",
+       "target": "worker:scrivener",
+       "factor": 1.25
+      },
+      {
+       "kind": "throughput",
+       "target": "worker:pedlar",
+       "factor": 0.9
+      }
+     ],
+     "line": "You gave the abbey its tenth. The cellarer blessed the desks, and the scriveners learned the old hands."
+    },
+    {
+     "id": "sheriff",
+     "label": "Ask the sheriff to settle it",
+     "consequence": "The sheriff rules for you, for a fee. Hiring is cheaper; the abbot’s novices come less willingly.",
+     "leaning": "crown",
+     "effects": [
+      {
+       "kind": "cost",
+       "target": "worker:scrivener",
+       "factor": 0.8
+      },
+      {
+       "kind": "throughput",
+       "target": "worker:novice",
+       "factor": 0.95
+      }
+     ],
+     "line": "You asked the sheriff to settle it. He ruled for you and dined at your table for a year."
+    },
+    {
+     "id": "refuse",
+     "label": "Refuse, and sell the tenth in the square",
+     "consequence": "The town cheers a scribe who defies the abbey. Pages sell faster; vellum costs more.",
+     "leaning": "commons",
+     "effects": [
+      {
+       "kind": "throughput",
+       "target": "worker:pedlar",
+       "factor": 1.3
+      },
+      {
+       "kind": "yield",
+       "target": "worker:tanner",
+       "factor": 0.9
+      }
+     ],
+     "line": "You refused the tithe and sold the tenth in the square. The alewives drank your health."
+    }
+   ]
+  },
+  {
+   "id": "river",
+   "chapter": 2,
+   "title": "The river rights",
+   "openLine": "The fishers and the mill both claim the water of the Sele.",
+   "passage": "The new millrace takes water the fishers have always had. By the end of the first week there are no eels at the weir, and forty men stand outside the mill with nets over their shoulders. Aldous wants you to buy the water outright: the Crown sells charters to anyone with the coin. The prior says the weir was the abbey’s before there was a town, and would lease it to you for prayers and a little silver. The fishers only want the sluice shut on Fridays.",
+   "options": [
+    {
+     "id": "share",
+     "label": "Shut the sluice on Fridays",
+     "consequence": "The fishers carry your ink to market for nothing. The mill grinds six days in seven.",
+     "leaning": "commons",
+     "effects": [
+      {
+       "kind": "throughput",
+       "target": "worker:miller",
+       "factor": 0.85
+      },
+      {
+       "kind": "throughput",
+       "target": "worker:gatherer",
+       "factor": 1.4
+      }
+     ],
+     "line": "You shut the sluice on Fridays. The fishers left eels on your step for a month."
+    },
+    {
+     "id": "charter",
+     "label": "Buy the charter from the Crown",
+     "consequence": "The water is yours alone. The mill grinds hard; the lanes stop gathering for you.",
+     "leaning": "crown",
+     "effects": [
+      {
+       "kind": "throughput",
+       "target": "worker:miller",
+       "factor": 1.35
+      },
+      {
+       "kind": "throughput",
+       "target": "worker:gatherer",
+       "factor": 0.85
+      }
+     ],
+     "line": "You bought the river charter from the Crown. It hangs framed in the mill, and the fishers spit when they pass."
+    },
+    {
+     "id": "lease",
+     "label": "Lease the weir from the abbey",
+     "consequence": "The abbey’s lay brothers work the mill for a share. Ink is steady, and the abbey takes its cut.",
+     "leaning": "cloister",
+     "effects": [
+      {
+       "kind": "throughput",
+       "target": "worker:miller",
+       "factor": 1.15
+      },
+      {
+       "kind": "yield",
+       "target": "worker:miller",
+       "factor": 0.85
+      },
+      {
+       "kind": "throughput",
+       "target": "worker:scrivener",
+       "factor": 1.2
+      }
+     ],
+     "line": "You leased the weir from the abbey. Lay brothers work the sluice and pray at the wheel."
+    }
+   ]
+  },
+  {
+   "id": "galls",
+   "chapter": 2,
+   "title": "The oak-gall harvest",
+   "openLine": "The best oak galls grow in the king’s forest.",
+   "passage": "The galls this autumn are small and pale, except in the king’s forest across the river, where the old oaks are thick with them. The verderer will sell a licence to gather there, dear, and send a man to count every basket. The common wood is free, but the galls there are poor and the children who gather them come home scratched. The abbey has an orchard of young oaks behind the infirmary, and the infirmarian says the trees would thank you for the pruning.",
+   "options": [
+    {
+     "id": "common",
+     "label": "Gather in the common wood",
+     "consequence": "Poor galls but free. Gatherers are cheap to hire; hand-ground ink is weaker.",
+     "leaning": "commons",
+     "effects": [
+      {
+       "kind": "cost",
+       "target": "worker:gatherer",
+       "factor": 0.7
+      },
+      {
+       "kind": "yield",
+       "target": "action:grind",
+       "factor": 0.8
+      }
+     ],
+     "line": "You gathered in the common wood. The children came home scratched and paid."
+    },
+    {
+     "id": "licence",
+     "label": "Buy the verderer’s licence",
+     "consequence": "Black, heavy galls. Gatherers make more ink and cost more to hire.",
+     "leaning": "crown",
+     "effects": [
+      {
+       "kind": "yield",
+       "target": "worker:gatherer",
+       "factor": 1.4
+      },
+      {
+       "kind": "cost",
+       "target": "worker:gatherer",
+       "factor": 1.15
+      }
+     ],
+     "line": "You bought the verderer’s licence. The ink that winter was the blackest in the diocese."
+    },
+    {
+     "id": "orchard",
+     "label": "Prune the abbey orchard",
+     "consequence": "A modest harvest, and the infirmarian’s gratitude: novices are lent to the mill.",
+     "leaning": "cloister",
+     "effects": [
+      {
+       "kind": "throughput",
+       "target": "worker:novice",
+       "factor": 1.5
+      },
+      {
+       "kind": "yield",
+       "target": "worker:gatherer",
+       "factor": 1.1
+      }
+     ],
+     "line": "You pruned the abbey orchard. The infirmarian sent novices to help at the mill."
+    }
+   ]
+  },
+  {
+   "id": "chains",
+   "chapter": 3,
+   "title": "The chained books",
+   "openLine": "The canons want every book chained to its desk.",
+   "passage": "A book costs as much as a cow now, and the canons of the cathedral want theirs chained to the desks: iron staples through the boards, a chain to a rod, the rod locked. It is how books have always been kept. But the schoolmaster wants his boys to take books home to their mothers’ tables, and the lord of the manor wants to buy a shelf of them outright for a hall where nobody reads. Every binding you make this month must be one kind or the other.",
+   "options": [
+    {
+     "id": "leave",
+     "label": "Let them leave the house",
+     "consequence": "Books go home with readers. More come back worn, but more people want them.",
+     "leaning": "commons",
+     "effects": [
+      {
+       "kind": "throughput",
+       "target": "worker:bookseller",
+       "factor": 1.3
+      },
+      {
+       "kind": "thrift",
+       "target": "worker:binder",
+       "factor": 1.1
+      }
+     ],
+     "line": "You let the books leave the house. Half came back with jam on them, and twice as many people asked for one."
+    },
+    {
+     "id": "chain",
+     "label": "Chain them for the canons",
+     "consequence": "Chained books last. Binders work slower on the ironwork; each book is worth more.",
+     "leaning": "cloister",
+     "effects": [
+      {
+       "kind": "yield",
+       "target": "worker:bookseller",
+       "factor": 1.3
+      },
+      {
+       "kind": "throughput",
+       "target": "worker:binder",
+       "factor": 0.9
+      }
+     ],
+     "line": "You chained the books for the canons. The cathedral library rang like a smithy."
+    },
+    {
+     "id": "manor",
+     "label": "Sell them to the manor houses",
+     "consequence": "Gentlemen pay for gilt edges and never open them. Money, and little else.",
+     "leaning": "crown",
+     "effects": [
+      {
+       "kind": "yield",
+       "target": "worker:bookseller",
+       "factor": 1.45
+      },
+      {
+       "kind": "throughput",
+       "target": "worker:bookseller",
+       "factor": 0.85
+      }
+     ],
+     "line": "You sold the books to the manor houses. They are very beautiful and very clean."
+    }
+   ]
+  },
+  {
+   "id": "seal",
+   "chapter": 3,
+   "title": "The guild seal",
+   "openLine": "The Stationers’ guild offers you its seal.",
+   "passage": "Master Ranulf of the Stationers comes in his best gown to offer you the guild’s seal. With it, your bindings may be sold in any guild town; without it, they may be seized at the gate. The price is the guild’s rules: fixed prices, a fixed number of apprentices, and a fine for any book sold on a Sunday. The king’s chancellor, meanwhile, grants warrants to favoured shops that put them above any guild. And the abbey will let you bind under its own ancient mark, which no guild has ever dared to touch.",
+   "options": [
+    {
+     "id": "guild",
+     "label": "Take the guild’s seal",
+     "consequence": "Fair prices and a fixed trade. Apprentices are cheaper; booksellers earn less on each book.",
+     "leaning": "commons",
+     "effects": [
+      {
+       "kind": "cost",
+       "target": "worker:binder",
+       "factor": 0.75
+      },
+      {
+       "kind": "yield",
+       "target": "worker:bookseller",
+       "factor": 0.9
+      },
+      {
+       "kind": "throughput",
+       "target": "worker:binder",
+       "factor": 1.2
+      }
+     ],
+     "line": "You took the Stationers’ seal. Master Ranulf kissed you on both cheeks."
+    },
+    {
+     "id": "warrant",
+     "label": "Hold out for a royal warrant",
+     "consequence": "Above the guild and its rules. Books sell dear, and the guild will not forget.",
+     "leaning": "crown",
+     "effects": [
+      {
+       "kind": "yield",
+       "target": "worker:bookseller",
+       "factor": 1.35
+      },
+      {
+       "kind": "cost",
+       "target": "worker:binder",
+       "factor": 1.15
+      }
+     ],
+     "line": "You held out for a royal warrant. It came in a year, with a seal the size of a saucer."
+    },
+    {
+     "id": "abbey_mark",
+     "label": "Bind under the abbey’s mark",
+     "consequence": "Protected and quiet. Monks bind beside your binders; fewer books reach the market.",
+     "leaning": "cloister",
+     "effects": [
+      {
+       "kind": "throughput",
+       "target": "worker:binder",
+       "factor": 1.35
+      },
+      {
+       "kind": "throughput",
+       "target": "worker:bookseller",
+       "factor": 0.9
+      }
+     ],
+     "line": "You bound under the abbey’s mark. No guildsman has ever set foot in the bindery."
+    }
+   ]
+  },
+  {
+   "id": "borrow",
+   "chapter": 4,
+   "title": "Who may borrow",
+   "openLine": "The lending room needs a rule for who may borrow.",
+   "passage": "The lending room has forty books and a hundred people who want them. A book lent is a book that might not come back. Margery says anyone who can sign their name in the roll should have one for a week, and that the ones who cannot sign will soon learn. The mayor says books should go to men of standing, who can be made to pay for a loss. The prior says the room should serve the clergy and their students, as libraries always have, and that he will pay for the chains.",
+   "options": [
+    {
+     "id": "anyone",
+     "label": "Anyone who can sign their name",
+     "consequence": "The whole lane comes to borrow. Renown spreads, and books wear out.",
+     "leaning": "commons",
+     "effects": [
+      {
+       "kind": "throughput",
+       "target": "worker:librarian",
+       "factor": 1.4
+      },
+      {
+       "kind": "thrift",
+       "target": "worker:librarian",
+       "factor": 1.5
+      }
+     ],
+     "line": "You lent to anyone who could sign. By Easter, forty people had learned to write their names."
+    },
+    {
+     "id": "standing",
+     "label": "Men of standing and their households",
+     "consequence": "Fewer borrowers, all of them able to pay. Pennies come in; renown is slower.",
+     "leaning": "crown",
+     "effects": [
+      {
+       "kind": "yield",
+       "target": "worker:bookseller",
+       "factor": 1.3
+      },
+      {
+       "kind": "throughput",
+       "target": "worker:librarian",
+       "factor": 0.85
+      }
+     ],
+     "line": "You lent to men of standing. The mayor’s wife returned every book with a note of thanks."
+    },
+    {
+     "id": "clergy",
+     "label": "Clerics and their students",
+     "consequence": "Careful readers. Books last, and the abbey pays for lessons.",
+     "leaning": "cloister",
+     "effects": [
+      {
+       "kind": "thrift",
+       "target": "worker:librarian",
+       "factor": 0.5
+      },
+      {
+       "kind": "yield",
+       "target": "worker:lector",
+       "factor": 1.25
+      }
+     ],
+     "line": "You lent to clerics and their students. The roll is short and written in Latin."
+    }
+   ]
+  },
+  {
+   "id": "commentary",
+   "chapter": 4,
+   "title": "The heretic’s commentary",
+   "openLine": "A preacher leaves a commentary on the Gospels in English.",
+   "passage": "A travelling preacher sleeps a night in the reading room and is gone before dawn, leaving a book behind. It is a commentary on the Gospels in plain English, well argued and fiercely against the bishops. Men have been burned for owning less. Margery has already read half of it and wants it shelved with the rest. The king’s justices are in the county for the assizes and would reward whoever brought it to them. The abbot has an aumbry with a good lock, and asks no questions about what goes into it.",
+   "options": [
+    {
+     "id": "shelve",
+     "label": "Shelve it with the rest",
+     "consequence": "Word gets round. The reading room fills; a bishop’s man starts to call.",
+     "leaning": "commons",
+     "effects": [
+      {
+       "kind": "throughput",
+       "target": "worker:lector",
+       "factor": 1.35
+      },
+      {
+       "kind": "yield",
+       "target": "worker:bookseller",
+       "factor": 0.85
+      }
+     ],
+     "line": "You shelved the commentary with the rest. It was borrowed three hundred times, and never by the same hand."
+    },
+    {
+     "id": "justices",
+     "label": "Hand it to the king’s justices",
+     "consequence": "The Crown rewards loyalty with trade. Readers stop trusting the room.",
+     "leaning": "crown",
+     "effects": [
+      {
+       "kind": "yield",
+       "target": "worker:bookseller",
+       "factor": 1.35
+      },
+      {
+       "kind": "throughput",
+       "target": "worker:lector",
+       "factor": 0.85
+      }
+     ],
+     "line": "You handed the commentary to the king’s justices. The preacher was taken at Ludlow."
+    },
+    {
+     "id": "aumbry",
+     "label": "Lock it in the abbot’s aumbry",
+     "consequence": "Safe and unread. The abbot’s gratitude runs to candles and teachers.",
+     "leaning": "cloister",
+     "effects": [
+      {
+       "kind": "throughput",
+       "target": "worker:librarian",
+       "factor": 1.3
+      },
+      {
+       "kind": "cost",
+       "target": "worker:lector",
+       "factor": 0.8
+      }
+     ],
+     "line": "You locked the commentary in the abbot’s aumbry. Nobody knows if he read it."
+    }
+   ]
+  },
+  {
+   "id": "strike",
+   "chapter": 5,
+   "title": "The scribes’ strike",
+   "openLine": "The scribes put down their pens and refuse to work beside the press.",
+   "passage": "On a Monday morning every desk in the scriptorium is empty. The scribes stand in the lane with their pens behind their ears. They have seen what the press does: in a day it makes what a scrivener makes in a year, and it does not need a scrivener to do it. Some of them have worked for you since the psalter. The sheriff offers to clear the lane. Pieter says, through Margery, that a good scribe would make a good compositor. The abbey says it will take in any scribe who wants a cell.",
+   "options": [
+    {
+     "id": "teach",
+     "label": "Teach them to set type",
+     "consequence": "Slow at first. Scribes become compositors, and the press never lacks hands.",
+     "leaning": "commons",
+     "effects": [
+      {
+       "kind": "throughput",
+       "target": "worker:founder",
+       "factor": 1.3
+      },
+      {
+       "kind": "throughput",
+       "target": "worker:pressman",
+       "factor": 1.2
+      },
+      {
+       "kind": "throughput",
+       "target": "worker:scrivener",
+       "factor": 0.8
+      }
+     ],
+     "line": "You taught the scribes to set type. Old Wat set his first line upside down, and his hundredth perfectly."
+    },
+    {
+     "id": "break",
+     "label": "Break the strike with the sheriff",
+     "consequence": "The lane is cleared. Cheap hands come in from outside; the town remembers.",
+     "leaning": "crown",
+     "effects": [
+      {
+       "kind": "cost",
+       "target": "worker:pressman",
+       "factor": 0.8
+      },
+      {
+       "kind": "throughput",
+       "target": "worker:lector",
+       "factor": 0.85
+      }
+     ],
+     "line": "You broke the strike with the sheriff. The lane was cleared by noon."
+    },
+    {
+     "id": "cells",
+     "label": "Let the abbey take them in",
+     "consequence": "The scribes go to the cloister and keep copying there. The abbey’s books pass through your bindery.",
+     "leaning": "cloister",
+     "effects": [
+      {
+       "kind": "throughput",
+       "target": "worker:binder",
+       "factor": 1.3
+      },
+      {
+       "kind": "throughput",
+       "target": "worker:papermaker",
+       "factor": 0.9
+      }
+     ],
+     "line": "You let the abbey take the scribes in. They copy psalters there still, very slowly and very well."
+    }
+   ]
+  },
+  {
+   "id": "patent",
+   "chapter": 5,
+   "title": "The royal patent",
+   "openLine": "The king offers a patent: the sole right to print in the shire.",
+   "passage": "The king’s messenger reads the patent aloud in the market so that everyone hears. It grants the printer at the sign of the Inkhorn the sole right to print books in the shire for twenty years, and makes any other press a crime. It asks, in return, that nothing be printed that the king’s council has not seen. Pieter goes white. Margery says a monopoly is a cage with a gold floor. The abbot suggests, gently, that the patent could as easily be made out to the abbey.",
+   "options": [
+    {
+     "id": "refuse_patent",
+     "label": "Refuse it, and print for anyone",
+     "consequence": "Rival presses open in the county. Your books are cheap and everywhere.",
+     "leaning": "commons",
+     "effects": [
+      {
+       "kind": "throughput",
+       "target": "worker:bookseller",
+       "factor": 1.4
+      },
+      {
+       "kind": "yield",
+       "target": "worker:bookseller",
+       "factor": 0.85
+      }
+     ],
+     "line": "You refused the patent and printed for anyone who paid. Three new presses opened by Whitsun."
+    },
+    {
+     "id": "accept",
+     "label": "Accept the patent",
+     "consequence": "No rivals, and the council reads every page first. Prices rise.",
+     "leaning": "crown",
+     "effects": [
+      {
+       "kind": "yield",
+       "target": "worker:bookseller",
+       "factor": 1.3
+      },
+      {
+       "kind": "throughput",
+       "target": "worker:lector",
+       "factor": 0.8
+      }
+     ],
+     "line": "You accepted the royal patent. The council’s reader sits in the corner of the composing room."
+    },
+    {
+     "id": "abbey_patent",
+     "label": "Ask for the patent in the abbey’s name",
+     "consequence": "The abbey holds the right and licenses you. Steady, pious and protected.",
+     "leaning": "cloister",
+     "effects": [
+      {
+       "kind": "throughput",
+       "target": "worker:pressman",
+       "factor": 1.2
+      },
+      {
+       "kind": "yield",
+       "target": "worker:bookseller",
+       "factor": 0.9
+      }
+     ],
+     "line": "You asked for the patent in the abbey’s name. The abbot holds it, and prints nothing he has not prayed over."
+    }
+   ]
+  },
+  {
+   "id": "edition",
+   "chapter": 6,
+   "title": "The last edition",
+   "openLine": "The presses are ready for one great last edition.",
+   "passage": "Pieter is old now, and so are you. Hollinford is a city of paper and lead, and the presses can make anything. There is money and paper enough for one great edition, the biggest ever pulled on the Sele, and it will be remembered as what the Inkhorn was for. Margery has written a primer: letters, sums, and the laws every tenant should know, to be sold for the price of a loaf. The king wants his statutes, with his arms on the title page. The abbot wants a Bible, a great one, printed once and never again. This choice counts twice.",
+   "weight": 2,
+   "options": [
+    {
+     "id": "primer",
+     "label": "A primer for every parish, sold at cost",
+     "consequence": "Carters take it everywhere. Little profit, and every town knows your name.",
+     "leaning": "commons",
+     "effects": [
+      {
+       "kind": "yield",
+       "target": "worker:carter",
+       "factor": 0.8
+      },
+      {
+       "kind": "throughput",
+       "target": "worker:carter",
+       "factor": 1.3
+      }
+     ],
+     "line": "You printed the primer for every parish. Sixty thousand copies, sold for the price of a loaf."
+    },
+    {
+     "id": "statutes",
+     "label": "The king’s statutes, under his arms",
+     "consequence": "The Crown buys the whole edition and pays in gold.",
+     "leaning": "crown",
+     "effects": [
+      {
+       "kind": "yield",
+       "target": "worker:carter",
+       "factor": 1.3
+      },
+      {
+       "kind": "throughput",
+       "target": "worker:carter",
+       "factor": 0.85
+      }
+     ],
+     "line": "You printed the king’s statutes under his arms. A copy is chained in every court in the realm."
+    },
+    {
+     "id": "bible",
+     "label": "A great Bible for the abbey",
+     "consequence": "One vast edition, slowly made. The abbey sends every lay brother to help.",
+     "leaning": "cloister",
+     "effects": [
+      {
+       "kind": "throughput",
+       "target": "worker:binder",
+       "factor": 1.3
+      },
+      {
+       "kind": "throughput",
+       "target": "worker:pressman",
+       "factor": 1.1
+      },
+      {
+       "kind": "yield",
+       "target": "worker:carter",
+       "factor": 0.95
+      }
+     ],
+     "line": "You printed the abbey’s great Bible. It took two years, and the abbey rang its bells for a day."
+    }
+   ]
+  }
+ ],
+ "endings": [
+  {
+   "id": "open_stacks",
+   "leaning": "commons",
+   "title": "The Open Stacks",
+   "passage": [
+    "They pulled the chains out of the lending room the winter Pieter died, and nobody ever put them back.",
+    "Hollinford became a town where carters read the notices they carried and fishwives argued about Boethius. Your cheapest books went through eleven editions. Children learned their letters from it at the kitchen table, then taught their parents, who were embarrassed and grateful in equal measure. Rival presses opened in every town on the Sele, and most of them were set up by men and women who had borrowed their first book from your shelves.",
+    "You never became rich. The bishops never forgave you for putting books in every kitchen, and the king’s council kept a file with your name on it that grew thicker every year. But when you were too old to pull a press, people still came to the door of the Inkhorn to ask for a book, and you still lent it to them.",
+    "Margery lived to be very old. In her last years she sat by the lending room door with the borrowers’ roll on her knee, and she knew every name in it and most of their mothers.",
+    "Your books were copied, pirated, translated and banned in turn. A bishop preached against them at Paul’s Cross. The next week the booksellers in the churchyard sold out of them by noon.",
+    "Brother Osric’s pupils became clerks and stewards and schoolmasters, and some of them became troublesome, which he said was the point.",
+    "There are no chains in the lending room. There is a notice by the door, in a hand anyone can read, that says: Bring it back when you have finished, and tell us what you thought.",
+    "When you died, the town put your name over the lending room. It is still open. Anyone who can sign their name may borrow a book for a week."
+   ]
+  },
+  {
+   "id": "kings_printer",
+   "leaning": "crown",
+   "title": "The King’s Printer",
+   "passage": [
+    "The Crown’s work came to you year after year, and at last the king made you his printer by name.",
+    "The Inkhorn printed the statutes of the realm, the proclamations of three reigns, the prayer book the council approved and the almanac the council corrected. Your carters wore the royal livery. Your house on the wharf had glass in every window and a cook from Bruges. When the other printers of the county were closed down, one by one, you bought their type at auction and melted it for your own.",
+    "Every page that left Hollinford was read first by a council reader who sat in the corner of the composing room, and he was a careful reader. Nothing foolish was printed, and nothing dangerous, and very little that was new.",
+    "Hamo’s nephew rose to be Master of the King’s Carriage and wore a chain of office on feast days. He never once carried a book he had been allowed to read.",
+    "Pieter died in your house, in a warm room, with a pension. On his last day he asked to hold the abbot’s psalter, the first book the Inkhorn ever made, and you could not tell him that it had been lost years ago.",
+    "Margery left the Inkhorn the year you took the royal livery and opened a stall in the churchyard of another town, selling almanacs that disagreed with yours.",
+    "The Inkhorn’s statutes are still the ones the lawyers quote. They are handsome, correct and very expensive, and the tenants they govern have never read a word of them.",
+    "You were buried in the cathedral, under a brass with your arms on it and a quill in a gloved hand. The Inkhorn still prints for the Crown. It has never missed a deadline, and never once been surprised."
+   ]
+  },
+  {
+   "id": "quiet_cloister",
+   "leaning": "cloister",
+   "title": "The Quiet Cloister",
+   "passage": [
+    "In the end you gave the presses to the abbey, and walked up the hill after them.",
+    "The monks print slowly. They print psalters and missals and lives of the saints, and books that take a year each and are chained in the nave where the light falls on them at noon. The old scribes copy beside the press still, in a warm room, very slowly and very well. The town below grew quieter as the trade moved downriver to louder places.",
+    "You took the habit at sixty. You rise for matins and correct proofs by candlelight, as you once copied the abbot’s psalter, and you teach the novices to cut a goose quill from the left wing.",
+    "Walter Wat, the scrivener with the cough, lived longer in the cloister than anyone expected. He taught the novices the secretary hand and the rules of the psalter, and he never touched a sort of type.",
+    "The paper mill at the weir fell quiet, and then fell in. The abbey kept one vat going for its own books, and a lay brother who remembered the Genoese made paper in it every spring.",
+    "Travellers still come up the hill to see the chained books in the nave. They are allowed to turn one page each, under supervision, and some of them cry.",
+    "Hollinford is a small town again. It has one printer, who prints notices and funeral cards, and a bookshop that opened in the old lending room and is mostly empty. On Thursday evenings, a monk comes down the hill to read aloud there.",
+    "When you died they buried you in the cloister garth. The abbey keeps a chronicle of everything it has printed, in your hand until the last page, and in a novice’s hand after that."
+   ]
+  }
+ ],
+ "credits": [
+  "Inkhorn",
+  "Written, designed and built by SocialSure Private Limited.",
+  "Display type: Grenze Gotisch by Omnibus-Type, under the SIL Open Font License 1.1.",
+  "Text type: Alegreya by Huerta Tipografica, under the SIL Open Font License 1.1.",
+  "Hollinford, the Sele and everyone in them are invented. The book trade is remembered loosely and with affection.",
+  "Thank you for reading to the last page."
+ ]
+}
