@@ -17,7 +17,7 @@ Grow a medieval scriptorium to a printing city. Story that ends. No ads or IAP
      Say what the app does, what it stores, that it works offline, and that it is paid once. -->
 Inkhorn is an idle incremental game with a written story that ends. Start with one quill; finish as master of a printing city. The ending depends on eleven choices you cannot take back.
 
-No ads. No in-app purchases. No energy timers. The price buys the whole game.
+No energy timers, and nothing to unlock later. The price buys the whole game.
 
 One-time purchase. No ads, no subscription, no account. Works fully offline.
 
@@ -45,7 +45,7 @@ Inkhorn can send one notification when a chapter finishes while you are away. It
 YOUR SAVE IS YOURS
 Send your save file through the share sheet and load it on another phone. Share your chronicle as plain text.
 
-No ads, no in-app purchases, no account, no internet permission, no data collected.
+No in-app purchases, no internet permission, no data collected.
 
 ## Release notes
 <!-- at most 500 characters, shown under What's new. -->
