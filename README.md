@@ -6,7 +6,7 @@ library, a press and a printing city, asks eleven choices that cannot be taken b
 of three endings with credits and a second chronicle. It is for adult readers who like incremental
 games but want a story with a last page. Paid once; no ads, no purchases, no account.
 
-Everything runs on the device. The app declares no network permission and sends nothing anywhere.
+Everything runs on the device. The app declares no internet permission and sends nothing anywhere.
 
 ## Build
 

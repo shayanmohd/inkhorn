@@ -21,7 +21,7 @@
 </head>
 <body>
 <h1>Inkhorn Privacy Policy</h1>
-<p class="meta">Last updated 13 September 2026</p>
+<p class="meta">Last updated 14 September 2026</p>
 
 <p>Inkhorn is a game published by SocialSure Private Limited. This policy explains what the game does with your information.</p>
 
@@ -40,6 +40,7 @@
 <li>POST_NOTIFICATIONS: one optional note when a chapter finishes while the game is closed. Inkhorn asks once, in context, and plays the same if you say no. You can turn chapter notes off in Settings at any time.</li>
 </ul>
 <p>The WorkManager library, which schedules that one note, adds WAKE_LOCK, RECEIVE_BOOT_COMPLETED, FOREGROUND_SERVICE and ACCESS_NETWORK_STATE to the manifest. Inkhorn uses none of them to collect or send anything.</p>
+<p>The AndroidX Core library adds com.mohdshayan.inkhorn.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION, a private permission that only Inkhorn itself holds. It keeps other apps from sending messages to Inkhorn's internal receivers and grants access to nothing on your phone.</p>
 
 <h2>Third parties</h2>
 <p>Inkhorn contains no advertising, no analytics and no third-party SDKs that collect data. After you finish chapter three it may ask the Google Play app to show its rating prompt once; that prompt is Google Play's own and is covered by Google's privacy policy.</p>

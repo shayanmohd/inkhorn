@@ -56,7 +56,7 @@ First release. Six chapters of the medieval book trade, eleven choices, three en
 Games, Simulation
 
 ## Content rating
-Everyone expected: no violence shown, no gambling, no user interaction, no purchases. Target audience 16 and over.
+Answer the IARC questionnaire truthfully: no violence shown (the story mentions deaths and that men were burned for owning books, in text only), no gambling, no sexual content, no user-to-user interaction, no digital purchases, no location sharing. The story text refers to alcohol (a character gets drunk, ale and beer are mentioned), so answer yes to references to alcohol. The likely result is a low age rating, for example PEGI 7 or ESRB Everyone 10+. Target audience 16 and over.
 
 ## Data safety declaration
 <!-- These answers are right only while the manifest has no INTERNET permission and no analytics SDK.
